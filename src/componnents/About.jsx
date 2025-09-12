@@ -1,52 +1,115 @@
 import React from 'react';
+import AboutMe from "../assets/About.jpg";
+import Abouthii from "../assets/about_two.png";
 
 function About() {
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+    <section className="py-16 px-4 md:px-8 lg:px-16 min-h-screen flex items-center relative">
+      <div className="max-w-7xl mx-auto w-full">
+        {/* Single centered content card */}
+        <div className="relative  rounded-3xl p-8 md:p-12">
+          {/* Cut corner effect */}
+          <div className="absolute top-0 right-0 w-16 h-16 bg-transparent">
+            <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-transparent via-transparent to-white/10 rounded-bl-3xl transform rotate-45 origin-top-right"></div>
+          </div>
           
-          {/* Left L-shape Column */}
-          <div className="flex flex-col justify-between md:w-1/2 relative">
-            {/* Vertical Line */}
-            <div className="absolute left-0 top-0 w-1 h-full bg-white"></div>
+          {/* Intro Section with aligned text & rounded image */}
+          <div className="intro mb-8 relative">
+            <div className="flex flex-row items-center gap-4 mb-6">
+              
 
-            {/* Text */}
-            <div className="pl-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                About Us
-              </h2>
-              <p className="text-white mb-4 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              {/* Intro text */}
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                Hii Rishabh Here
+              </h1>
+
+              {/* Profile image first */}
+              <div className="flex-shrink-0">
+                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full overflow-hidden">
+                  <img 
+                    src={AboutMe} 
+                    alt="Rishabh" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Decorative line */}
+            <div className="w-100 h-1 bg-gradient-to-r from-white/60 to-transparent rounded-full"></div>
+          </div>
+
+          {/* Content Layout - Profile image (left) + text (right) */}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+            
+           
+
+            {/* About Text */}
+            <div className="flex-1 about text-white/90 leading-relaxed text-lg space-y-4">
+              <p>
+                My name is <span className="text-white font-semibold">Rishabh Rajendar Thakur</span>. In addition to being a web developer, my interests include anime, cricket, and sketching.
               </p>
-              <p className="text-white mb-4 leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-                in culpa qui officia deserunt mollit anim id est laborum.
+              <p>
+                I'm an anime enthusiast that is eager to savor every second of life.
               </p>
-              <p className="text-white leading-relaxed">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+              <p>
+                I love cricket, and I'm prepared to take on life's curve-balls.
+              </p>
+              <p>
+                As a sketch artist, I think it's important to sketch my own destiny.
+              </p>
+              <p className="italic text-white/80">
+                Life is similar to asynchronous coding as there are instances when you must use async and wait for a solution.
               </p>
             </div>
 
-            {/* Horizontal Line (bottom part of L) */}
-            <div className="w-full h-1 bg-white  mt-8"></div>
-          </div>
+             {/* Profile Image with centered orbital animation */}
+            <div className="flex-shrink-0 relative">
+              <div className="relative group">
+                {/* Image container without border or background */}
+                <div className="relative rounded-3xl">
+                  <div className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl overflow-hidden">
+                    <img 
+                      src={Abouthii} 
+                      alt="Rishabh Profile" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                
+                {/* Orbit animation centered */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="relative w-full h-full">
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full border border-white/10 rounded-full animate-spin-slow"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 border border-white/10 rounded-full animate-reverse-spin"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          {/* Image on Right */}
-          <div className="md:w-1/2 flex items-start ">
-            <img 
-              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
-              alt="About us" 
-              className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
-            />
           </div>
-
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes spin-slow {
+          from { transform: translate(-50%, -50%) rotate(0deg); }
+          to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        @keyframes reverse-spin {
+          from { transform: translate(-50%, -50%) rotate(360deg); }
+          to { transform: translate(-50%, -50%) rotate(0deg); }
+        }
+        
+        .animate-spin-slow {
+          animation: spin-slow 20s linear infinite;
+        }
+        
+        .animate-reverse-spin {
+          animation: reverse-spin 15s linear infinite;
+        }
+      `}</style>
     </section>
   );
 }

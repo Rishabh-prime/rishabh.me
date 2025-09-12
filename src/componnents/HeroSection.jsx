@@ -105,7 +105,7 @@ function HeroSection() {
     style={{ top: '10%', left: '10%' }}
   >
     {/* Dialogue box - size unchanged */}
-    <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white text-black text-xs font-semibold px-2 py-1 rounded-full shadow-md border border-gray-300">
+    <div className="absolute -top-6 left-1/2 -translate-x-1/2  text-white text-xs font-semibold px-2 py-1 rounded-full shadow-md border border-gray-300">
       Catch me!
     </div>
 

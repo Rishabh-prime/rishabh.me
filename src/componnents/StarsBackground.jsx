@@ -36,7 +36,7 @@ const StarsBackground = () => {
     };
   }, []);
 
-  return <div className="stars"></div>;
+  return  <><div className="stars"></div></> ;
 };
 
 export default StarsBackground;
