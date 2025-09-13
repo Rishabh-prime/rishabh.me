@@ -13,7 +13,7 @@ function Experience() {
   const experiences = [
     {
       id: 1,
-      period: "2023 - Present",
+      period: "2024-2025",
       title: "Junior Frontend Developer",
       company: "at BioInnova",
       icon: "🛰️",
@@ -27,16 +27,16 @@ function Experience() {
           text: "Built a Shopify-based website: The Pure Craft.",
         },
         {
-          text: "Currently working on a digital marketing website using React.js and GSAP.",
+          text: "Also worked on a digital marketing website using React.js and GSAP, focusing on advanced animations and smooth interactions.",
         },
         {
-          text: "Actively learning Firebase for backend services and SEO.",
+          text: "Actively learning Firebase for backend services and enhancing skills in Search Engine Optimization (SEO).",
         },
       ],
     },
     {
       id: 2,
-      period: "2022 - 2023",
+      period: "2025",
       title: "Web Developer",
       company: "at Receptive Solutions",
       icon: "🛸",
@@ -44,16 +44,19 @@ function Experience() {
       glowColor: "bg-purple-400/20",
       achievements: [
         {
-          text: "Developed National Alert with React.js, Tailwind CSS, and Node.js.",
+          text: "Receptive Solutions Website – Designed and developed the full frontend using React.js & Tailwind CSS.",
         },
         {
-          text: "Built secure REST APIs with local caching.",
+          text: "Review Website – Designing and developing the entire frontend in React.js & Tailwind CSS, implementing a complete review system (project in progress).",
         },
         {
-          text: "Created an Admin Panel with role-based access using React.js and Appwrite.",
+          text: "Review Website – Designing and developing the entire frontend in React.js & Tailwind CSS, implementing a complete review system (project in progress).",
         },
         {
-          text: "Integrated file uploads, article submission, and email notifications.",
+          text: "Built secure REST APIs, implemented local caching, and developed a role-based Admin Panel using React.js & Appwrite.",
+        },
+        {
+          text: "Integrated file uploads, article submission, and email notifications to enhance user/admin experience.",
         },
       ],
     },
@@ -115,7 +118,7 @@ function Experience() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Calculate rocket position - travels on the right side of the vertical line
+  // Calculate rocket position - travels on the right side of the vertical line (desktop only)
   const totalExperiences = experiences.length;
   const basePosition = 120; // Starting position from top
   const maxPosition = basePosition + totalExperiences * 300; // 300px spacing between experiences
@@ -127,9 +130,9 @@ function Experience() {
 
   // Rocket component
   const RocketComponent = () => (
-    <div className="w-20 h-20   flex items-center justify-center shadow-2xl ">
-      <div className="text-3xl">
-        <img src={Astronot}></img>
+    <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center shadow-2xl">
+      <div className="text-2xl md:text-3xl">
+        <img src={Astronot} alt="Astronaut" className="w-full h-full object-contain" />
       </div>
     </div>
   );
@@ -138,7 +141,7 @@ function Experience() {
     <div
       ref={sectionRef}
       id="experience-section"
-      className="min-h-screen relative overflow-hidden "
+      className="min-h-screen relative overflow-hidden"
     >
       <style>
         {`
@@ -154,22 +157,22 @@ function Experience() {
         `}
       </style>
 
-      <div className="container mx-auto px-8 py-16 relative z-10">
+      <div className="container mx-auto px-4 md:px-8 py-8 md:py-16 relative z-10">
         {/* Main heading */}
-        <h1 className="text-6xl font-bold mb-16 text-center bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 bg-clip-text text-transparent">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-16 text-center bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 bg-clip-text text-transparent px-4">
           My Experience Journey
         </h1>
 
         <div className="relative max-w-5xl mx-auto">
-          {/* Central vertical line */}
+          {/* Central vertical line - only on desktop */}
           <div
-            className="absolute left-1/2 transform -translate-x-0.5 w-1 bg-white shadow-sm"
-            style={{ height: `${maxPosition + 100}px` }}
+            className="hidden lg:block absolute left-1/2 transform -translate-x-0.5 w-1 bg-white shadow-sm"
+            style={{ height: `${maxPosition + 350}px` }}
           ></div>
 
-          {/* Rocket - positioned on the right side of the vertical line */}
+          {/* Rocket - positioned on the right side of the vertical line (desktop only) */}
           <div
-            className="absolute z-30"
+            className="hidden lg:block absolute z-30"
             style={{
               left: "calc(50% + 60px)", // 60px to the right of the center line
               top: `${rocketPosition}px`,
@@ -183,133 +186,184 @@ function Experience() {
           </div>
 
           {/* Experience Items */}
-          <div className="space-y-24 pt-12">
+          <div className="space-y-8 md:space-y-16 lg:space-y-24 pt-4 md:pt-8 lg:pt-12">
             {experiences.map((experience, index) => (
               <div
                 key={experience.id}
-                className="flex items-center experience-item"
-                style={{ minHeight: "300px" }}
+                className="experience-item"
               >
-                {experience.side === "left" ? (
-                  <>
-                    {/* Left side content */}
-                    <div className="w-1/2 pr-12">
-                      <div className=" border-1  rounded-2xl p-8 shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-105">
-                        <div className="text-sm text-white font-semibold mb-2">
-                          {experience.period}
-                        </div>
-                        <h3 className="text-2xl font-bold mb-2 text-gray-800">
-                          {experience.title}
-                        </h3>
-                        <h4 className="text-xl text-gray-600 mb-6">
-                          {experience.company}
-                        </h4>
-                        <ul className="space-y-4 text-gray-700">
-                          {experience.achievements.map(
-                            (achievement, achIndex) => (
-                              <li
-                                key={achIndex}
-                                className="flex items-start group"
-                              >
-                                <span
-                                  className={` text-white mr-3 mt-1 group-hover:scale-125 transition-transform text-lg`}
+                {/* Desktop Layout (lg and above) */}
+                <div className="hidden lg:flex lg:items-center" style={{ minHeight: "300px" }}>
+                  {experience.side === "left" ? (
+                    <>
+                      {/* Left side content */}
+                      <div className="w-1/2 pr-12">
+                        <div className="border-1 border-white rounded-2xl p-8 shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-105">
+                          <div className="text-sm text-white font-semibold mb-2">
+                            {experience.period}
+                          </div>
+                          <h3 className="text-2xl font-bold mb-2 text-gray-800">
+                            {experience.title}
+                          </h3>
+                          <h4 className="text-xl text-gray-600 mb-6">
+                            {experience.company}
+                          </h4>
+                          <ul className="space-y-4 text-gray-700">
+                            {experience.achievements.map(
+                              (achievement, achIndex) => (
+                                <li
+                                  key={achIndex}
+                                  className="flex items-start group"
                                 >
-                                  ▪
-                                </span>
-                                <span className="text-white transition-colors leading-relaxed">
-                                  {achievement.text}
-                                </span>
-                              </li>
-                            )
-                          )}
-                        </ul>
-                      </div>
-                    </div>
-
-                    {/* Space Station */}
-                    <div
-                      className={`absolute left-1/2 transform -translate-x-1/2 w-24 h-24 z-20 transition-all duration-700 ${
-                        visibleStations.has(index)
-                          ? "scale-100 opacity-100 rotate-0"
-                          : "scale-0 opacity-0 rotate-180"
-                      }`}
-                    >
-                      <div
-                        className={`w-full h-full bg-gradient-to-br ${experience.gradient} rounded-full flex items-center justify-center shadow-2xl  hover:scale-110 transition-transform cursor-pointer`}
-                      >
-                        <div className="text-4xl animate-pulse">
-                          {experience.icon}
+                                  <span className="text-white mr-3 mt-1 group-hover:scale-125 transition-transform text-lg">
+                                    ▪
+                                  </span>
+                                  <span className="text-white transition-colors leading-relaxed">
+                                    {achievement.text}
+                                  </span>
+                                </li>
+                              )
+                            )}
+                          </ul>
                         </div>
                       </div>
-                      <div
-                        className={`absolute -inset-3 ${experience.glowColor} rounded-full blur-xl animate-pulse`}
-                      ></div>
-                    </div>
 
-                    <div className="w-1/2 pl-12"></div>
-                  </>
-                ) : (
-                  <>
-                    <div className="w-1/2 pr-12"></div>
-
-                    {/* Space Station */}
-                    <div
-                      className={`absolute left-1/2 transform -translate-x-1/2 w-24 h-24 z-20 transition-all duration-700 ${
-                        visibleStations.has(index)
-                          ? "scale-100 opacity-100 rotate-0"
-                          : "scale-0 opacity-0 -rotate-180"
-                      }`}
-                    >
+                      {/* Space Station */}
                       <div
-                        className={`w-full h-full bg-gradient-to-br ${experience.gradient} rounded-full flex items-center justify-center shadow-2xl  hover:scale-110 transition-transform cursor-pointer`}
+                        className={`absolute left-1/2 transform -translate-x-1/2 w-24 h-24 z-20 transition-all duration-700 ${
+                          visibleStations.has(index)
+                            ? "scale-100 opacity-100 rotate-0"
+                            : "scale-0 opacity-0 rotate-180"
+                        }`}
                       >
                         <div
-                          className="text-4xl"
-                          style={{ animation: "pulse 2s ease-in-out infinite" }}
+                          className={`w-full h-full bg-gradient-to-br ${experience.gradient} rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer`}
                         >
-                          {experience.icon}
+                          <div className="text-4xl animate-pulse">
+                            {experience.icon}
+                          </div>
+                        </div>
+                        <div
+                          className={`absolute -inset-3 ${experience.glowColor} rounded-full blur-xl animate-pulse`}
+                        ></div>
+                      </div>
+
+                      <div className="w-1/2 pl-12"></div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="w-1/2 pr-12"></div>
+
+                      {/* Space Station */}
+                      <div
+                        className={`absolute left-1/2 transform -translate-x-1/2 w-24 h-24 z-20 transition-all duration-700 ${
+                          visibleStations.has(index)
+                            ? "scale-100 opacity-100 rotate-0"
+                            : "scale-0 opacity-0 -rotate-180"
+                        }`}
+                      >
+                        <div
+                          className={`w-full h-full bg-gradient-to-br ${experience.gradient} rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer`}
+                        >
+                          <div
+                            className="text-4xl"
+                            style={{ animation: "pulse 2s ease-in-out infinite" }}
+                          >
+                            {experience.icon}
+                          </div>
+                        </div>
+                        <div
+                          className={`absolute -inset-3 ${experience.glowColor} rounded-full blur-xl animate-pulse`}
+                        ></div>
+                      </div>
+
+                      {/* Right side content */}
+                      <div className="w-1/2 pl-12">
+                        <div className="border-1 border-white  rounded-2xl p-8 shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-105">
+                          <div className="text-sm text-white font-semibold mb-2">
+                            {experience.period}
+                          </div>
+                          <h3 className="text-2xl font-bold mb-2 text-gray-800">
+                            {experience.title}
+                          </h3>
+                          <h4 className="text-xl text-gray-600 mb-6">
+                            {experience.company}
+                          </h4>
+                          <ul className="space-y-4 text-gray-700">
+                            {experience.achievements.map(
+                              (achievement, achIndex) => (
+                                <li
+                                  key={achIndex}
+                                  className="flex items-start group"
+                                >
+                                  <span className="text-white mr-3 mt-1 group-hover:scale-125 transition-transform text-lg">
+                                    ▪
+                                  </span>
+                                  <span className="text-white transition-colors leading-relaxed">
+                                    {achievement.text}
+                                  </span>
+                                </li>
+                              )
+                            )}
+                          </ul>
                         </div>
                       </div>
-                      <div
-                        className={`absolute -inset-3 ${experience.glowColor} rounded-full blur-xl animate-pulse`}
-                      ></div>
-                    </div>
+                    </>
+                  )}
+                </div>
 
-                    {/* Right side content */}
-                    <div className="w-1/2 pl-12">
-                      <div className="border-1  rounded-2xl p-8 shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-105">
+                {/* Mobile & Tablet Layout (below lg) */}
+                <div className="lg:hidden">
+                  <div className="relative">
+                    {/* Mobile card layout */}
+                    <div className="border-1 border-white rounded-2xl p-4 md:p-6 shadow-lg transition-all duration-500 hover:shadow-xl">
+                      {/* Icon at the top for mobile */}
+                      <div className="flex justify-center mb-4">
+                        <div
+                          className={`w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br ${experience.gradient} rounded-full flex items-center justify-center shadow-2xl transition-all duration-700 ${
+                            visibleStations.has(index)
+                              ? "scale-100 opacity-100 rotate-0"
+                              : "scale-95 opacity-80"
+                          }`}
+                        >
+                          <div className="text-2xl md:text-3xl animate-pulse">
+                            {experience.icon}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="text-center mb-4">
                         <div className="text-sm text-white font-semibold mb-2">
                           {experience.period}
                         </div>
-                        <h3 className="text-2xl font-bold mb-2 text-gray-800">
+                        <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">
                           {experience.title}
                         </h3>
-                        <h4 className="text-xl text-gray-600 mb-6">
+                        <h4 className="text-lg md:text-xl text-gray-600 mb-4 md:mb-6">
                           {experience.company}
                         </h4>
-                        <ul className="space-y-4 text-gray-700">
-                          {experience.achievements.map(
-                            (achievement, achIndex) => (
-                              <li
-                                key={achIndex}
-                                className="flex items-start group"
-                              >
-                                <span
-                                  className={` text-white mr-3 mt-1 group-hover:scale-125 transition-transform text-lg`}
-                                >
-                                  ▪
-                                </span>
-                                <span className="text-white transition-colors leading-relaxed">
-                                  {achievement.text}
-                                </span>
-                              </li>
-                            )
-                          )}
-                        </ul>
                       </div>
+
+                      <ul className="space-y-3 md:space-y-4 text-gray-700">
+                        {experience.achievements.map(
+                          (achievement, achIndex) => (
+                            <li
+                              key={achIndex}
+                              className="flex items-start group"
+                            >
+                              <span className="text-white mr-3 mt-1 group-hover:scale-125 transition-transform text-lg flex-shrink-0">
+                                ▪
+                              </span>
+                              <span className="text-white transition-colors leading-relaxed text-sm md:text-base">
+                                {achievement.text}
+                              </span>
+                            </li>
+                          )
+                        )}
+                      </ul>
                     </div>
-                  </>
-                )}
+                  </div>
+                </div>
               </div>
             ))}
           </div>

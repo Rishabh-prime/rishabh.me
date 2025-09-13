@@ -102,10 +102,50 @@ function Projects() {
         </div>
       )}
       
+      {/* Orbital Animations */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        {/* Large Outer Orbit */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="orbit-large">
+            <div className="orbit-dot orbit-dot-1"></div>
+          </div>
+        </div>
+        
+        {/* Medium Orbit */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="orbit-medium">
+            <div className="orbit-dot orbit-dot-2"></div>
+            <div className="orbit-dot orbit-dot-3"></div>
+          </div>
+        </div>
+        
+        {/* Small Inner Orbit */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="orbit-small">
+            <div className="orbit-dot orbit-dot-4"></div>
+            <div className="orbit-dot orbit-dot-5"></div>
+            <div className="orbit-dot orbit-dot-6"></div>
+          </div>
+        </div>
+        
+        {/* Additional offset orbits */}
+        <div className="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="orbit-mini">
+            <div className="orbit-dot orbit-dot-7"></div>
+          </div>
+        </div>
+        
+        <div className="absolute bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2">
+          <div className="orbit-mini-reverse">
+            <div className="orbit-dot orbit-dot-8"></div>
+          </div>
+        </div>
+      </div>
+      
       {/* Floating background images */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         {/* Floating image 1 */}
-        <img 
+        {/* <img 
           src={Bgone} 
           alt="Space background" 
           className="absolute opacity-20 animate-float-slow"
@@ -115,10 +155,10 @@ function Projects() {
             width: '150px',
             transform: 'rotate(15deg)',
           }}
-        />
+        /> */}
         
         {/* Floating image 2 */}
-        <img 
+        {/* <img 
           src={Bgtwo} 
           alt="Space background" 
           className="absolute opacity-30 animate-float-medium"
@@ -129,9 +169,9 @@ function Projects() {
             transform: 'rotate(-10deg)',
           }}
         />
-        
+         */}
         {/* Floating image 3 */}
-        <img 
+        {/* <img 
           src={Bgthree} 
           alt="Space background" 
           className="absolute opacity-25 animate-float-slow"
@@ -141,9 +181,9 @@ function Projects() {
             width: '180px',
             transform: 'rotate(5deg)',
           }}
-        />
+        /> */}
 
-        <img 
+        {/* <img 
           src={Bgtwo} 
           alt="Space background" 
           className="absolute opacity-20 animate-float-slow"
@@ -153,9 +193,9 @@ function Projects() {
             width: '150px',
             transform: 'rotate(15deg)',
           }}
-        />
+        /> */}
 
-         <img 
+         {/* <img 
           src={Bgone} 
           alt="Space background" 
           className="absolute opacity-20 animate-float-slow"
@@ -165,9 +205,9 @@ function Projects() {
             width: '150px',
             transform: 'rotate(15deg)',
           }}
-        />
+        /> */}
 
-        {/* Floating image 3 */}
+        {/* Floating image 3
         <img 
           src={Bgthree} 
           alt="Space background" 
@@ -178,23 +218,9 @@ function Projects() {
             width: '180px',
             transform: 'rotate(5deg)',
           }}
-        />
+        /> */}
         
-        {/* Additional floating stars */}
-        {[...Array(20)].map((_, i) => (
-          <div 
-            key={i}
-            className="absolute rounded-full bg-white animate-pulse"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              width: `${Math.random() * 4 + 1}px`,
-              height: `${Math.random() * 4 + 1}px`,
-              opacity: Math.random() * 0.7 + 0.3,
-              animationDuration: `${Math.random() * 5 + 3}s`
-            }}
-          />
-        ))}
+        
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto">
@@ -262,7 +288,7 @@ function Projects() {
         
       </div>
 
-      {/* Add custom animations for floating images */}
+      {/* Add custom animations for floating images and orbits */}
       <style>
         {`
           @keyframes float-slow {
@@ -275,12 +301,104 @@ function Projects() {
             50% { transform: translateY(-15px) rotate(-5deg); }
             100% { transform: translateY(0) rotate(0deg); }
           }
+          @keyframes orbit {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+          @keyframes orbit-reverse {
+            0% { transform: rotate(360deg); }
+            100% { transform: rotate(0deg); }
+          }
+          
           .animate-float-slow {
             animation: float-slow 10s ease-in-out infinite;
           }
           .animate-float-medium {
             animation: float-medium 8s ease-in-out infinite;
           }
+          
+          /* Orbit containers */
+          .orbit-large {
+            width: 800px;
+            height: 800px;
+            border: 2px solid rgba(147, 197, 253, 0.1);
+            border-radius: 50%;
+            position: relative;
+            animation: orbit 60s linear infinite;
+          }
+          
+          .orbit-medium {
+            width: 500px;
+            height: 500px;
+            border: 2px solid rgba(168, 85, 247, 0.1);
+            border-radius: 50%;
+            position: relative;
+            animation: orbit-reverse 40s linear infinite;
+          }
+          
+          .orbit-small {
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            position: relative;
+            animation: orbit 30s linear infinite;
+          }
+          
+         
+          
+         
+          /* Orbital dots/particles */
+          .orbit-dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            top: -3px;
+          }
+          
+          .orbit-dot-1 {
+            background: rgba(147, 197, 253, 0.8);
+            left: 50%;
+            box-shadow: 0 0 10px rgba(147, 197, 253, 0.5);
+          }
+          
+          .orbit-dot-2 {
+            background: rgba(168, 85, 247, 0.8);
+            left: 50%;
+            box-shadow: 0 0 8px rgba(168, 85, 247, 0.5);
+          }
+          
+          .orbit-dot-3 {
+            background: rgba(168, 85, 247, 0.6);
+            left: 50%;
+            top: calc(100% - 3px);
+            box-shadow: 0 0 6px rgba(168, 85, 247, 0.4);
+          }
+          
+          .orbit-dot-4 {
+            background: rgba(244, 246, 244, 0.8);
+            left: 50%;
+            box-shadow: 0 0 8px rgba(248, 252, 249, 0.5);
+          }
+          
+          .orbit-dot-5 {
+              background: rgba(244, 246, 244, 0.8);
+            left: -3px;
+            top: 50%;
+              background: rgba(244, 246, 244, 0.8);;
+          }
+          
+          .orbit-dot-6 {
+           background: rgba(244, 246, 244, 0.8);
+            left: calc(100% - 3px);
+            top: 50%;
+              background: rgba(244, 246, 244, 0.8);
+          }
+          
+         
+          
+          
         `}
       </style>
     </div>

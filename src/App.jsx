@@ -8,8 +8,10 @@ import About from './componnents/About'
 import StarsBackground from './componnents/StarsBackground'
 import Experience from './componnents/Experience'
 import Projects from './componnents/Projects'
+import OthersProject from './componnents/OthersProject'
 import Skills from './componnents/Skills'
 import Footer from './componnents/Footer'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +24,7 @@ function App() {
     <About/>
     <Experience/>
     <Projects/>
+    <OthersProject/>
     <Skills/>
     <Footer/>
     </>
