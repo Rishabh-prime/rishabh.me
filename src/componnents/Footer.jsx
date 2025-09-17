@@ -318,7 +318,7 @@ function Footer() {
                 in the cosmos
               </p>
               <p className="text-gray-500 text-xs md:text-sm mt-2">
-                © {new Date().getFullYear()} Rishabh Thakur. All rights reserved.
+                © {new Date().getFullYear()} Rishabh Thakur. 
               </p>
             </div>
           </div>
