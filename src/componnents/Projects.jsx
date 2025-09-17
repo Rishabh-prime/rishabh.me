@@ -45,7 +45,7 @@ function Projects() {
       id: 5,
       name: "Receptive Solutions",
       description: "Build a immigration website",
-      techStack: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind.js", "Mango DB"],
+      techStack: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind.js", "Mongo DB"],
       demoLink: "https://frontend-receptive.vercel.app/",
       sourceLink: ""
     },
