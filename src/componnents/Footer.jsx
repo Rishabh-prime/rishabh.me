@@ -7,7 +7,6 @@ import Bgfour from "../assets/about_four.png";
 import Bgsix from "../assets/about_six.png";
 import { FaDownload, FaEnvelope } from "react-icons/fa";
 
-
 function Footer() {
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -115,9 +114,85 @@ function Footer() {
 
   return (
     <footer className="relative overflow-hidden border-t border-gray-700 bg-gradient-to-b from-gray-900/50 to-black/80">
-      
+      {/* Floating Action Buttons */}
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 flex flex-col gap-2 sm:gap-3 z-50">
+        {/* Email Button */}
+        <button
+          onClick={() =>
+            window.open(
+              "https://mail.google.com/mail/?view=cm&fs=1&to=rishabhthakurfcs@gmail.com",
+              "_blank"
+            )
+          }
+          className="group relative w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center animate-pulse-slow cursor-pointer"
+        >
+          <FaEnvelope className="text-white text-lg sm:text-xl" />
+          
+          {/* Tooltip - Hidden on mobile */}
+          <span className="absolute right-14 sm:right-16 top-1/2 transform -translate-y-1/2 bg-black text-white text-xs sm:text-sm py-1 px-2 sm:py-2 sm:px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap hidden sm:block">
+            Send Email
+          </span>
+          
+          {/* Ripple effect */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 animate-ping opacity-20"></div>
+        </button>
 
-     
+        {/* Resume Download Button */}
+        <button
+          onClick={() => window.open("/rishabh.me/Rishabh-Thakur-Resume.pdf", "_blank")}
+          className="group relative w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-green-600 to-teal-600 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center animate-pulse-slow cursor-pointer"
+          style={{ animationDelay: '1s' }}
+        >
+          <FaDownload className="text-white text-lg sm:text-xl" />
+          
+          {/* Tooltip - Hidden on mobile */}
+          <span className="absolute right-14 sm:right-16 top-1/2 transform -translate-y-1/2 bg-black text-white text-xs sm:text-sm py-1 px-2 sm:py-2 sm:px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap hidden sm:block">
+            Download Resume
+          </span>
+          
+          {/* Ripple effect */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-600 to-teal-600 animate-ping opacity-20"></div>
+        </button>
+      </div>
+
+      {/* Floating background images */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
+        <img
+          src={Bgfive}
+          alt="Space background"
+          className="absolute animate-float-medium hidden md:block"
+          style={{
+            top: "20%",
+            left: "10%",
+            width: "60px",
+            transform: "rotate(15deg)",
+          }}
+        />
+
+        <img
+          src={Bgfour}
+          alt="Space background"
+          className="absolute animate-float-slow hidden lg:block"
+          style={{
+            top: "40%",
+            right: "10%",
+            width: "4rem",
+            transform: "rotate(5deg)",
+          }}
+        />
+
+        <img
+          src={Bgsix}
+          alt="Space background"
+          className="absolute animate-float-medium hidden md:block"
+          style={{
+            bottom: "30%",
+            left: "5%",
+            width: "50px",
+            transform: "rotate(-10deg)",
+          }}
+        />
+      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content */}
@@ -167,7 +242,7 @@ function Footer() {
                         "_blank"
                       )
                     }
-                    className="flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105  cursor-pointer hover:shadow-xl group"
+                    className="flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl group"
                   >
                     <FaEnvelope className="text-lg group-hover:animate-bounce" />
                     Email Me
@@ -239,14 +314,14 @@ function Footer() {
                 in the cosmos
               </p>
               <p className="text-gray-500 text-xs md:text-sm mt-2">
-                © {new Date().getFullYear()} Rishabh Thakur.
+                © {new Date().getFullYear()} Rishabh Thakur. All rights reserved.
               </p>
             </div>
 
             {/* Back to top button */}
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="group flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-gray-700 to-gray-600 rounded-xl text-white hover:from-gray-600 hover:to-gray-500 transition-all duration-300  cursor-pointer hover:scale-105 hover:shadow-lg"
+              className="group flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-gray-700 to-gray-600 rounded-xl text-white hover:from-gray-600 hover:to-gray-500 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <span className="text-sm md:text-base font-medium">Back to top</span>
               <svg

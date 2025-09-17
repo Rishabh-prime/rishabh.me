@@ -36,7 +36,7 @@ function About() {
             </div>
 
             {/* Decorative line */}
-            <div className="w-100 h-1 bg-gradient-to-r from-white/60 to-transparent rounded-full"></div>
+            <div className="w-40 h-1 bg-gradient-to-r from-white/60 to-transparent rounded-full"></div>
           </div>
 
           {/* Content Layout - Profile image (left) + text (right) */}
