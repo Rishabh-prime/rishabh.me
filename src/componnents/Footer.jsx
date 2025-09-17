@@ -173,7 +173,7 @@ function Footer() {
                   </button>
 
                   <button
-                    onClick={() => window.open("/resume.pdf", "_blank")}
+                    onClick={() => window.open("../assets/Rishabh Thakur _Resume.pdf", "_blank")}
                     className="flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 cursor-pointer hover:shadow-xl group"
                   >
                     <FaDownload className="text-lg group-hover:animate-bounce" />
