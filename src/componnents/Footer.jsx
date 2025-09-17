@@ -242,7 +242,7 @@ function Footer() {
                         "_blank"
                       )
                     }
-                    className="flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl group"
+                    className="flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 cursor-pointer hover:shadow-xl group"
                   >
                     <FaEnvelope className="text-lg group-hover:animate-bounce" />
                     Email Me
