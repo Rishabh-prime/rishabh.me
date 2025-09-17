@@ -35,14 +35,14 @@ const StarsBackground = () => {
       starsContainer.appendChild(img);
     };
 
-    // Your exact placements
-    createImage(Bgnine, {
-      position: "absolute",
-      top: "5%",  // top right
-      right: "5%",
-      width: "180px", // bigger size
-      height: "auto",
-    });
+    // // Your exact placements
+    // createImage(Bgnine, {
+    //   position: "absolute",
+    //   top: "5%",  // top right
+    //   right: "5%",
+    //   width: "180px", // bigger size
+    //   height: "auto",
+    // });
 
     // createImage(Bgeight, {
     //   position: "absolute",
