@@ -319,26 +319,7 @@ function Footer() {
             </div>
 
             {/* Back to top button */}
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="group flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-gray-700 to-gray-600 rounded-xl text-white hover:from-gray-600 hover:to-gray-500 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-            >
-              <span className="text-sm md:text-base font-medium">Back to top</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 md:h-6 md:w-6 group-hover:transform group-hover:-translate-y-1 transition-transform duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 15l7-7 7 7"
-                />
-              </svg>
-            </button>
+           
           </div>
         </div>
       </div>
