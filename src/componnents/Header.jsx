@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+    import { useNavigate } from 'react-router-dom';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
 
   // Handle scroll event to add background when scrolled
   useEffect(() => {
@@ -35,7 +37,7 @@ function Header() {
             {/* Logo with glow effect */}
             <div className="logo-container z-50">
               <div className="text-white text-3xl font-bold font-raleway tracking-wide">
-                Rishabh
+                <a href="home">Rishabh</a>
               </div>
               <div className="logo-underline"></div>
             </div>

@@ -14,21 +14,41 @@ import Footer from './componnents/Footer'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <StarsBackground/>
-    <Header/>
-    <HeroSection/>
-    <About/>
-    <Experience/>
-    <Projects/>
-    <OthersProject/>
-    <Skills/>
-    <Footer/>
+      <StarsBackground />
+      <Header />
+      
+      <section id="home">
+ <HeroSection />
+      </section>
+     
+
+      {/* Section IDs must match your href="#id" */}
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="experience">
+        <Experience />
+      </section>
+
+      <section id="projects">
+        <Projects />
+        <OthersProject/>
+      </section>
+
+      <section id="skills">
+        <Skills />
+      </section>
+
+      <section id="contact">
+   <Footer />
+      </section>
+   
     </>
-  )
+  );
 }
+
 
 export default App

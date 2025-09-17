@@ -6,33 +6,33 @@ function OthersProject() {
   const projects = [
     {
       id: 1,
-      name: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with payment integration",
-      github: "https://github.com/username/ecommerce-platform"
+      name: "Dog Breed Image Search",
+      description: "This project is a responsive website that allows users to search for images of dogs based on their breed. ",
+      github: "https://github.com/Rishabh-prime/Dog-Breed-Image-Viewer"
     },
     {
       id: 2,
-      name: "Task Management App",
-      description: "A productivity app for managing daily tasks and projects",
-      github: "https://github.com/username/task-manager"
+      name: "Movie Information Website",
+      description: "A simple web application to search for movies , series using the OMDb API. The application fetches movie details such as title, description, cast, and poster image, and updates the UI accordingly.",
+      github: "https://github.com/Rishabh-prime/Movie-Information-Website"
     },
     {
       id: 3,
       name: "Weather Dashboard",
-      description: "Real-time weather information with forecasting capabilities",
-      github: "https://github.com/username/weather-dashboard"
+      description: "This Weather App allows users to search for a city and get the current temperature, humidity, and wind speed.",
+      github: "https://github.com/Rishabh-prime/Weather-APP"
     },
     {
       id: 4,
-      name: "Social Media Dashboard",
-      description: "Analytics dashboard for social media management with real-time insights",
-      github: "https://github.com/username/social-dashboard"
+      name: "Ecommerce site",
+      description: "Build a ecommerce site useing uesing Shopify",
+      github: "https://thepurecraft.com/"
     },
     {
       id: 5,
-      name: "Portfolio Website",
-      description: "Personal portfolio website built with React and modern animations",
-      github: "https://github.com/username/portfolio-website"
+      name: "Bubbel Game",
+      description: "A Simpel Bubbel Game useing HTML,CSS, JavaScript",
+      github: "https://github.com/Rishabh-prime/Bubbel-Game/tree/main"
     }
   ];
 

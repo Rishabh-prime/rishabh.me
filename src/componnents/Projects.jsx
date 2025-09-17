@@ -11,76 +11,76 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      name: "Stellar Explorer",
-      description: "Interactive 3D visualization of our solar system with detailed planetary information.",
-      techStack: ["React", "Three.js", "WebGL", "Node.js"],
-      demoLink: "https://example.com/stellar-explorer",
-      sourceLink: "https://github.com/example/stellar-explorer"
+      name: "Ecommerce Site",
+      description: "Build a Cara Online Store Cara Online Store is a modern e-commerce website showcasing a variety of products. ",
+      techStack: ["HTML", "CSS", "JavaScript"],
+      demoLink: "https://rishabh-prime.github.io/Ecommerce-Website/",
+      sourceLink: "https://github.com/Rishabh-prime/Ecommerce-Website"
     },
     {
       id: 2,
-      name: "Nebula Analytics",
-      description: "Data visualization platform for astronomical research with real-time data processing.",
-      techStack: ["Python", "D3.js", "MongoDB", "Flask"],
-      demoLink: "https://example.com/nebula-analytics",
-      sourceLink: "https://github.com/example/nebula-analytics"
+      name: "Plinko Game",
+      description: "This project simulates a Plinko game where balls are dropped and bounce off obstacles, eventually landing in one of the sinks at the bottom. When a ball hits a sink, the text of the sink is displayed in a separate div.",
+      techStack: ["HTML", "CSS", "JavaScript"],
+      demoLink: "https://rishabh-prime.github.io/PlinkoGame/",
+      sourceLink: "https://rishabh-prime.github.io/PlinkoGame/"
     },
     {
       id: 3,
-      name: "Cosmic Travel Planner",
+      name: "Blog Apllication",
       description: "Theoretical space travel itinerary planner using current astrophysics research.",
-      techStack: ["JavaScript", "Vue", "Firebase", "CSS3"],
+      techStack: ["HTML", "CSS", "JavaScript", "React.js","Tailwind","Appwrite"],
       demoLink: "", // Empty link for testing
-      sourceLink: "https://github.com/example/cosmic-travel"
+      sourceLink: "https://github.com/Rishabh-prime/Blog-Website-"
     },
     {
       id: 4,
-      name: "Galaxy Classifier",
-      description: "Machine learning application that classifies galaxy types from telescope imagery.",
-      techStack: ["TensorFlow", "Python", "OpenCV", "FastAPI"],
+      name: "Code Editor",
+      description: "A Simple Code Editor Made Using By Html ,Css , Javascript and React.js This Code editor is build for Html , Css and Javascript",
+      techStack:  ["HTML", "CSS", "JavaScript", "React.js"],
       demoLink: "https://example.com/galaxy-classifier",
       sourceLink: "https://github.com/example/galaxy-classifier"
     },
     {
       id: 5,
-      name: "Orbit Tracker",
-      description: "Real-time satellite and space debris tracking system with collision prediction.",
-      techStack: ["React", "WebSockets", "Python", "PostGIS"],
-      demoLink: "https://example.com/orbit-tracker",
-      sourceLink: "" // Empty link for testing
+      name: "Receptive Solutions",
+      description: "Build a immigration website",
+      techStack: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind.js", "Mango DB"],
+      demoLink: "https://frontend-receptive.vercel.app/",
+      sourceLink: ""
     },
     {
       id: 6,
-      name: "Space Weather Dashboard",
-      description: "Monitoring solar flares, radiation levels and other space weather phenomena.",
-      techStack: ["React", "Chart.js", "NASA API", "Tailwind CSS"],
-      demoLink: "https://example.com/space-weather",
-      sourceLink: "https://github.com/example/space-weather"
+      name: "Fact Bulltien",
+      description: "Build a News website",
+      techStack: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind.js", "Postgreys"],
+      demoLink: "https://nationalalertnews.com/",
+      sourceLink: ""
     },
-    {
-      id: 7,
-      name: "Exoplanet Database",
-      description: "Searchable catalog of known exoplanets with detailed characteristics and discovery info.",
-      techStack: ["Next.js", "GraphQL", "PostgreSQL", "Apollo"],
-      demoLink: "https://example.com/exoplanet-db",
-      sourceLink: "https://github.com/example/exoplanet-db"
-    },
-    {
-      id: 8,
-      name: "Lunar Habitat Simulator",
-      description: "VR simulation of lunar living conditions with resource management systems.",
-      techStack: ["Unity", "C#", "SteamVR", "Blender"],
-      demoLink: "https://example.com/lunar-habitat",
-      sourceLink: "https://github.com/example/lunar-habitat"
-    },
-    {
-      id: 9,
-      name: "Astro Photography Suite",
-      description: "Image processing toolkit for enhancing and analyzing astronomical photographs.",
-      techStack: ["Python", "OpenCV", "PyQT", "NumPy"],
-      demoLink: "",
-      sourceLink: "https://github.com/example/astro-photo"
-    },
+    // {
+    //   id: 7,
+    //   name: "Exoplanet Database",
+    //   description: "Searchable catalog of known exoplanets with detailed characteristics and discovery info.",
+    //   techStack: ["Next.js", "GraphQL", "PostgreSQL", "Apollo"],
+    //   demoLink: "https://example.com/exoplanet-db",
+    //   sourceLink: "https://github.com/example/exoplanet-db"
+    // },
+    // {
+    //   id: 8,
+    //   name: "Lunar Habitat Simulator",
+    //   description: "VR simulation of lunar living conditions with resource management systems.",
+    //   techStack: ["Unity", "C#", "SteamVR", "Blender"],
+    //   demoLink: "https://example.com/lunar-habitat",
+    //   sourceLink: "https://github.com/example/lunar-habitat"
+    // },
+    // {
+    //   id: 9,
+    //   name: "Astro Photography Suite",
+    //   description: "Image processing toolkit for enhancing and analyzing astronomical photographs.",
+    //   techStack: ["Python", "OpenCV", "PyQT", "NumPy"],
+    //   demoLink: "",
+    //   sourceLink: "https://github.com/example/astro-photo"
+    // },
   ];
 
   const handleLinkClick = (link, type) => {
@@ -142,99 +142,20 @@ function Projects() {
         </div>
       </div>
       
-      {/* Floating background images */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        {/* Floating image 1 */}
-        {/* <img 
-          src={Bgone} 
-          alt="Space background" 
-          className="absolute opacity-20 animate-float-slow"
-          style={{
-            top: '10%',
-            left: '5%',
-            width: '150px',
-            transform: 'rotate(15deg)',
-          }}
-        /> */}
-        
-        {/* Floating image 2 */}
-        {/* <img 
-          src={Bgtwo} 
-          alt="Space background" 
-          className="absolute opacity-30 animate-float-medium"
-          style={{
-            top: '70%',
-            right: '10%',
-            width: '120px',
-            transform: 'rotate(-10deg)',
-          }}
-        />
-         */}
-        {/* Floating image 3 */}
-        {/* <img 
-          src={Bgthree} 
-          alt="Space background" 
-          className="absolute opacity-25 animate-float-slow"
-          style={{
-            top: '30%',
-            right: '5%',
-            width: '180px',
-            transform: 'rotate(5deg)',
-          }}
-        /> */}
-
-        {/* <img 
-          src={Bgtwo} 
-          alt="Space background" 
-          className="absolute opacity-20 animate-float-slow"
-          style={{
-            top: '40%',
-            left: '5%',
-            width: '150px',
-            transform: 'rotate(15deg)',
-          }}
-        /> */}
-
-         {/* <img 
-          src={Bgone} 
-          alt="Space background" 
-          className="absolute opacity-20 animate-float-slow"
-          style={{
-            top: '40%',
-            left: '50%',
-            width: '150px',
-            transform: 'rotate(15deg)',
-          }}
-        /> */}
-
-        {/* Floating image 3
-        <img 
-          src={Bgthree} 
-          alt="Space background" 
-          className="absolute opacity-25 animate-float-slow"
-          style={{
-            top: '70%',
-            right: '50%',
-            width: '180px',
-            transform: 'rotate(5deg)',
-          }}
-        /> */}
-        
-        
-      </div>
+     
       
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Space Projects</h2>
+          <h2 className="text-4xl font-bold text-white mb-4"> Projects</h2>
           <p className="text-xl text-gray-300">Exploring the universe through code and innovation</p>
           <div className="mt-2 w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="bg-opacity-20  border border-gray-700 rounded-xl p-6 transition-all duration-300 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer"
+              className="bg-opacity-20  border border-gray-700 rounded-xl p-6 transition-all duration-300 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 hover:bg-black/80 hover:backdrop-blur-sm cursor-pointer"
             >
               <div className="mb-6">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center mb-4">
