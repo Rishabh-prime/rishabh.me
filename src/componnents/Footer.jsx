@@ -249,56 +249,60 @@ function Footer() {
                   </button>
 
                   <button
-  onClick={() => window.open("/rishabh.me/Rishabh-Thakur-Resume.pdf", "_blank")}
-  className="flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 cursor-pointer hover:shadow-xl group"
->
-  <FaDownload className="text-lg group-hover:animate-bounce" />
-  Download Resume
-</button>
-
+                    onClick={() => window.open("/rishabh.me/Rishabh-Thakur-Resume.pdf", "_blank")}
+                    className="flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 cursor-pointer hover:shadow-xl group"
+                  >
+                    <FaDownload className="text-lg group-hover:animate-bounce" />
+                    Download Resume
+                  </button>
                 </div>
               </div>
             </div>
 
-            {/* Right Column - Social Links */}
+            {/* Right Column - Social Links (IMPROVED RESPONSIVE DESIGN) */}
             <div className="lg:col-span-1">
               <div className="text-center lg:text-right">
                 <h4 className="text-xl md:text-2xl font-semibold text-white mb-6">
                   Follow My Journey
                 </h4>
 
-                {/* Social Links Grid */}
-                <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-4 justify-center lg:justify-end max-w-xs mx-auto lg:mx-0 lg:ml-auto">
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`group relative w-16 h-16 md:w-18 md:h-18 border-2 border-white rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl ${social.color} hover:-translate-y-1`}
-                      aria-label={social.name}
-                    >
-                      <div className="w-6 h-6 md:w-7 md:h-7">{social.icon}</div>
-
-                      {/* Tooltip */}
-                      <span className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-2 px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-20 shadow-lg">
-                        {social.name}
-                      </span>
-                    </a>
-                  ))}
-                </div>
-
-                {/* Contact Info */}
-                <div className="mt-8 space-y-3 text-sm md:text-base text-gray-400">
-                  <div className="flex items-center justify-center lg:justify-end gap-2">
-                    <span>📧</span>
-                    <span>rishabhthakurfcs@gmail.com</span>
-                  </div>
-                  <div className="flex items-center justify-center lg:justify-end gap-2">
-                    <span>📍</span>
+                  {/* Contact Info */}
+                <div className="mt-2 space-y-3 text-sm md:text-base text-gray-400">
+ <div className="flex items-center justify-center lg:justify-end gap-1">
+                    <span>💻</span>
                     <span>Available for remote work</span>
                   </div>
+                  <div className="flex items-center justify-center lg:justify-end gap-1 flex-wrap">
+                    <span>📧</span>
+                    <span className="break-all sm:break-normal">rishabhthakurfcs@gmail.com</span>
+                  </div>
+                 
                 </div>
+
+                {/* Social Links Grid - RESPONSIVE IMPROVEMENTS */}
+                <div className="w-full mt-3 flex justify-center lg:justify-end mb-6">
+                  <div className="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-3 xl:grid-cols-3 gap-2 sm:gap-3 lg:gap-3 max-w-sm sm:max-w-none lg:max-w-xs">
+                    {socialLinks.map((social, index) => (
+                      <a
+                        key={index}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`group relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border-2 border-white rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl ${social.color} hover:-translate-y-1`}
+                        aria-label={social.name}
+                      >
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7">{social.icon}</div>
+
+                        {/* Tooltip - Only show on larger screens */}
+                        <span className="absolute -top-10 sm:-top-12 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 sm:py-2 sm:px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-20 shadow-lg hidden md:block">
+                          {social.name}
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
+              
               </div>
             </div>
           </div>
@@ -317,9 +321,6 @@ function Footer() {
                 © {new Date().getFullYear()} Rishabh Thakur. All rights reserved.
               </p>
             </div>
-
-            {/* Back to top button */}
-           
           </div>
         </div>
       </div>
