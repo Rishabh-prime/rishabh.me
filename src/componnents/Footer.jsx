@@ -196,8 +196,8 @@ function Footer() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content */}
-        <div className="py-12 md:py-16 lg:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-12">
+        <div className="py-12 md:py-16 lg:py-15">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 ">
             {/* Left Column - About */}
             <div className="lg:col-span-1">
               <div className="text-center lg:text-left">

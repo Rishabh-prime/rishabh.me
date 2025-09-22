@@ -53,13 +53,13 @@ const StarsBackground = () => {
     //   height: "auto",
     // });
 
-    createImage(Bgseven, {
-      position: "absolute",
-      top: "60%", // center middle
-      left: "50%",
-      transform: "translate(-50%, -50%)",
+    // createImage(Bgseven, {
+    //   position: "absolute",
+    //   top: "60%", // center middle
+    //   left: "50%",
+    //   transform: "translate(-50%, -50%)",
       
-    });
+    // });
 
     // createImage(Bgsix, {
     //   position: "absolute",

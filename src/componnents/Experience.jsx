@@ -11,31 +11,8 @@ function Experience() {
 
   // Experience data - easily add more experiences here
   const experiences = [
-    {
+ {
       id: 1,
-      period: "2024-2025",
-      title: "Junior Frontend Developer",
-      company: "at BioInnova",
-      icon: "🛰️",
-      side: "left",
-      glowColor: "bg-blue-400/20",
-      achievements: [
-        {
-          text: "Developed a wholesale e-commerce website: BioInnova Africa using HTML, CSS, JavaScript, and Bootstrap.",
-        },
-        {
-          text: "Built a Shopify-based website: The Pure Craft.",
-        },
-        {
-          text: "Also worked on a digital marketing website using React.js and GSAP, focusing on advanced animations and smooth interactions.",
-        },
-        {
-          text: "Actively learning Firebase for backend services and enhancing skills in Search Engine Optimization (SEO).",
-        },
-      ],
-    },
-    {
-      id: 2,
       period: "2025",
       title: "Web Developer",
       company: "at Receptive Solutions",
@@ -59,7 +36,31 @@ function Experience() {
           text: "Integrated file uploads, article submission, and email notifications to enhance user/admin experience.",
         },
       ],
+    } ,
+    {
+      id: 2,
+      period: "2024-2025",
+      title: "Junior Frontend Developer",
+      company: "at BioInnova",
+      icon: "🛰️",
+      side: "left",
+      glowColor: "bg-blue-400/20",
+      achievements: [
+        {
+          text: "Developed a wholesale e-commerce website: BioInnova Africa using HTML, CSS, JavaScript, and Bootstrap.",
+        },
+        {
+          text: "Built a Shopify-based website: The Pure Craft.",
+        },
+        {
+          text: "Also worked on a digital marketing website using React.js and GSAP, focusing on advanced animations and smooth interactions.",
+        },
+        {
+          text: "Actively learning Firebase for backend services and enhancing skills in Search Engine Optimization (SEO).",
+        },
+      ],
     },
+   
     // Add more experiences here in the future
   ];
 
