@@ -102,7 +102,7 @@ function Skills() {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12">
+        {/* <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12">
           {categories.map((category) => (
             <button
               key={category.id}
@@ -119,7 +119,7 @@ function Skills() {
               </span>
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Skills Display */}
         <div className="space-y-6 md:space-y-8">

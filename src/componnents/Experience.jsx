@@ -13,7 +13,7 @@ function Experience() {
   const experiences = [
  {
       id: 1,
-      period: "2025",
+      period: "Apr 2025 – Present",
       title: "Web Developer",
       company: "at Receptive Solutions",
       icon: "🛸",
@@ -21,19 +21,19 @@ function Experience() {
       glowColor: "bg-purple-400/20",
       achievements: [
         {
-          text: "Receptive Solutions Website – Designed and developed the full frontend using React.js & Tailwind CSS.",
+          text: "Built ",
+          link: { text: "CoreReviews", url: "https://www.corereviews.com/" },
+          text2: ", a company review platform enabling users to post reviews and comments while allowing companies to manage profiles, improving transparency and user engagement. (React.js, Tailwind CSS, Node.js, Supabase)",
         },
         {
-          text: "Review Website – Designing and developing the entire frontend in React.js & Tailwind CSS, implementing a complete review system (project in progress).",
+          text: "Developed ",
+          link: { text: "Fact Bulletin", url: "https://www.thefactbulletinnews.com/" },
+          text2: ", a full-stack news platform with secure REST APIs and a role-based Admin Panel for publishing and managing articles. (React.js, Tailwind CSS, Node.js, PostgreSQL)",
         },
         {
-          text: "Review Website – Designing and developing the entire frontend in React.js & Tailwind CSS, implementing a complete review system (project in progress).",
-        },
-        {
-          text: "Built secure REST APIs, implemented local caching, and developed a role-based Admin Panel using React.js & Appwrite.",
-        },
-        {
-          text: "Integrated file uploads, article submission, and email notifications to enhance user/admin experience.",
+          text: "Created the ",
+          link: { text: "Receptive Solutions Company Website", url: "https://receptivesolutions.co.in/" },
+          text2: " with secure authentication, review submissions, and a feedback system to enhance user interaction. (React.js, Tailwind CSS, Node.js, MongoDB)",
         },
       ],
     } ,
@@ -138,6 +138,27 @@ function Experience() {
     </div>
   );
 
+  // Helper function to render achievement text with optional link
+  const renderAchievementText = (achievement) => {
+    if (achievement.link) {
+      return (
+        <>
+          {achievement.text}
+          <a 
+            href={achievement.link.url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="font-bold underline hover:text-blue-300 transition-colors"
+          >
+            {achievement.link.text}
+          </a>
+          {achievement.text2}
+        </>
+      );
+    }
+    return achievement.text;
+  };
+
   return (
     <div
       ref={sectionRef}
@@ -172,7 +193,7 @@ function Experience() {
           ></div>
 
           {/* Rocket - positioned on the right side of the vertical line (desktop only) */}
-          <div
+          {/* <div
             className="hidden lg:block absolute z-30"
             style={{
               left: "calc(50% + 60px)", // 60px to the right of the center line
@@ -184,7 +205,7 @@ function Experience() {
             }}
           >
             <RocketComponent />
-          </div>
+          </div> */}
 
           {/* Experience Items */}
           <div className="space-y-8 md:space-y-16 lg:space-y-24 pt-4 md:pt-8 lg:pt-12">
@@ -220,7 +241,7 @@ function Experience() {
                                     ▪
                                   </span>
                                   <span className="text-white transition-colors leading-relaxed">
-                                    {achievement.text}
+                                    {renderAchievementText(achievement)}
                                   </span>
                                 </li>
                               )
@@ -301,7 +322,7 @@ function Experience() {
                                     ▪
                                   </span>
                                   <span className="text-white transition-colors leading-relaxed">
-                                    {achievement.text}
+                                    {renderAchievementText(achievement)}
                                   </span>
                                 </li>
                               )
@@ -356,7 +377,7 @@ function Experience() {
                                 ▪
                               </span>
                               <span className="text-white transition-colors leading-relaxed text-sm md:text-base">
-                                {achievement.text}
+                                {renderAchievementText(achievement)}
                               </span>
                             </li>
                           )
