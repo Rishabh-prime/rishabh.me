@@ -139,7 +139,7 @@ function Footer() {
 
         {/* Resume Download Button */}
         <button
-          onClick={() => window.open("/rishabh.me/Rishabh-Thakur-Resume.pdf", "_blank")}
+          onClick={() => window.open("/rishabh.me/Rishabh_Thakur_Resume.pdf", "_blank")}
           className="group relative w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-green-600 to-teal-600 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center animate-pulse-slow cursor-pointer"
           style={{ animationDelay: '1s' }}
         >
