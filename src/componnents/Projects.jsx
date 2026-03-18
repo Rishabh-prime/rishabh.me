@@ -41,14 +41,14 @@ function Projects() {
       demoLink: "https://example.com/galaxy-classifier",
       sourceLink: "https://github.com/example/galaxy-classifier"
     },
-    // {
-    //   id: 5,
-    //   name: "Receptive Solutions",
-    //   description: "Build a immigration website",
-    //   techStack: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind.js", "Mongo DB"],
-    //   demoLink: "https://frontend-receptive.vercel.app/",
-    //   sourceLink: ""
-    // },
+    {
+      id: 5,
+      name: "Code Vault ",
+      description: "Your personal vault for code snippets, tasks, and folders. Stay organized, ship faster.",
+      techStack: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind.js", "Mongo DB"],
+      demoLink: "",
+      sourceLink: "https://github.com/Rishabh-prime/CodeVault-Frontend"
+    },
     // {
     //   id: 6,
     //   name: "Fact Bulltien",
