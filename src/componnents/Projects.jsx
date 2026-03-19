@@ -46,7 +46,7 @@ function Projects() {
       name: "Code Vault ",
       description: "Your personal vault for code snippets, tasks, and folders. Stay organized, ship faster.",
       techStack: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind.js", "Mongo DB"],
-      demoLink: "",
+      demoLink: "https://code-vault-frontend-tan.vercel.app/",
       sourceLink: "https://github.com/Rishabh-prime/CodeVault-Frontend"
     },
     // {
