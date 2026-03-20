@@ -22,7 +22,7 @@ function Projects() {
       name: "Plinko Game",
       description: "This project simulates a Plinko game where balls are dropped and bounce off obstacles, eventually landing in one of the sinks at the bottom. When a ball hits a sink, the text of the sink is displayed in a separate div.",
       techStack: ["HTML", "CSS", "JavaScript"],
-      demoLink: "https://github.com/Rishabh-prime/PlinkoGame",
+      demoLink: "https://github.com/Rishabh-prime/PlinkoGamen",
       sourceLink: "https://rishabh-prime.github.io/PlinkoGame/"
     },
     {
