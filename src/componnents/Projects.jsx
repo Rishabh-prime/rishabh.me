@@ -22,7 +22,7 @@ function Projects() {
       name: "Plinko Game",
       description: "This project simulates a Plinko game where balls are dropped and bounce off obstacles, eventually landing in one of the sinks at the bottom. When a ball hits a sink, the text of the sink is displayed in a separate div.",
       techStack: ["HTML", "CSS", "JavaScript"],
-      demoLink: "https://rishabh-prime.github.io/PlinkoGame/",
+      demoLink: "https://github.com/Rishabh-prime/PlinkoGame",
       sourceLink: "https://rishabh-prime.github.io/PlinkoGame/"
     },
     {
@@ -38,8 +38,8 @@ function Projects() {
       name: "Code Editor",
       description: "A Simple Code Editor Made Using By Html ,Css , Javascript and React.js This Code editor is build for Html , Css and Javascript",
       techStack:  ["HTML", "CSS", "JavaScript", "React.js"],
-      demoLink: "https://example.com/galaxy-classifier",
-      sourceLink: "https://github.com/example/galaxy-classifier"
+      demoLink: "",
+      sourceLink: "https://github.com/Rishabh-prime/Code-Editor"
     },
     {
       id: 5,
